@@ -1,0 +1,131 @@
+/**
+    Fuente
+        Archivo Narrow
+        font-family: 'Archivo Narrow', sans-serif;
+    Colores:
+        fondo-página: honeydew
+        fondo-contenedor: grey
+        borde-contenedor: darkslategrey
+        texto/puntos/línea-horizontal: whitesmoke
+        dados: maroon/chocolate/darkorange/darkgreen/navy/indigo
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: honeydew;
+}
+
+.contenedor {
+    margin: 10vh 5vw;
+    background-color: grey;
+    border-radius: 10px;
+    border: 5px solid darkslategrey;
+}
+
+h1 {
+    font-family: 'Archivo Narrow', sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 7vh;
+}
+
+hr {
+    background-color: whitesmoke;
+    height: 1vh;
+    border: none;
+    margin: auto;
+    margin-bottom: 5vh;
+    width: 75vw;
+}
+
+.flexible {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.dado {
+    height: 150px;
+    width: 150px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.punto {
+    height: 25px;
+    width: 25px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.dado1 {
+    background-color: maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dado2 {
+    background-color: chocolate;
+    display: flex;
+    justify-content: space-between;
+}
+
+.punto2-1 {
+    align-self: flex-end;
+}
+
+.dado3 {
+    background-color: darkorange;
+    display: flex;
+    justify-content: space-between;
+}
+
+.punto3-1 {
+    align-self: flex-end;
+}
+
+.punto3-2 {
+    align-self: center;
+}
+
+.dado4 {
+    background-color: darkgreen;
+    display: flex;
+    justify-content: space-between;
+}
+
+.columna1 {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+}
+
+.columna2 {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column wrap;
+}
+
+.dado5 {
+    background-color: navy;
+    display: flex;
+    justify-content: space-between;
+}
+
+.punto5 {
+    align-self: center;
+}
+
+.dado6 {
+    background-color: indigo;
+    display: flex;
+    justify-content: space-between;
+}

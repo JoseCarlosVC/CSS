@@ -1,0 +1,284 @@
+/**
+    Fuentes:
+        Literata
+        font-family: 'Literata', serif;
+    Colores:
+        fondo página: lightslategrey
+        fondo contenedor: darkslategray
+        h1,hr,borde contenedor y fondo naipes: gainsboro
+        corazones: #900007
+        sombra: black, 50% transparencia
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightslategrey;
+    font-family: 'Literata', serif;
+}
+
+.contenedor {
+    margin: 10vh 5vw;
+    background-color: darkslategray;
+    border-radius: 10px;
+    border: 5px solid gainsboro;
+}
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 7vh;
+}
+
+hr {
+    background-color: whitesmoke;
+    height: 1vh;
+    border: none;
+    margin: auto;
+    margin-bottom: 5vh;
+    width: 75vw;
+}
+
+.flexible {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.carta {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+    color: #900007;
+    /*9 x 13*/
+    width: 150px;
+    height: 216px;
+    background-color: gainsboro;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+
+/*.num10 {
+    writing-mode: initial;
+    text-orientation: initial;
+}*/
+
+.columna1,
+.columna3 {
+    /* writing-mode: vertical-lr;*/
+    /* text-orientation: upright;*/
+    /*¿¿???¿?¿?¿Ha dejado de hacer falta??*/
+    font-size: 14px;
+    margin: 5px;
+}
+
+.num {
+    margin: 3px;
+    margin-bottom: -5px;
+}
+
+.num10 {
+    margin-bottom: -5px;
+}
+
+.letra {
+    margin: 2px;
+    margin-bottom: -5px;
+}
+
+.columna3 {
+    align-items: flex-end;
+    transform: rotateZ(180deg);
+}
+
+.columna2 {
+    margin: 10px 0 10px;
+    font-size: 30px;
+}
+
+.columna2-1 {
+    align-self: center;
+}
+
+.columna2-2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.columna2-3 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.columna2-4 {
+    display: flex;
+    flex-flow: row nowrap;
+    /*justify-content: space-between;*/
+    /*justify-content: space-between;*/
+    /*display: flex;
+    flex-flow: row wrap;*/
+    /*justify-content: space-evenly;*/
+}
+
+.col2-4-1,
+.col2-4-2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    /*flex-flow: column wrap;*/
+    /*justify-content: space-between;*/
+}
+
+.vacio {
+    /*Con un div oculto podemos centrar las columnas*/
+    opacity: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.columna2-5 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.col2-5-1,
+.col2-5-2,
+.col2-5-3 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.columna2-6 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.col2-5-3 {
+    margin-left: 5px;
+    margin-right: 5px;
+    align-self: center;
+}
+
+.col2-6-1,
+.col2-6-2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.columna2-7 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.col2-7-1,
+.col2-7-2,
+.col2-7-3 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.col2-7-3 {
+    justify-content: space-around;
+}
+
+.columna2-8 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.col2-8-1,
+.col2-8-2,
+.col2-8-3 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.col2-8-3 {
+    justify-content: space-around;
+}
+
+.columna2-9 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.col2-9-1,
+.col2-9-2,
+.col2-9-3 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.col2-9-3 {
+    justify-content: space-around;
+}
+
+.columna2-10 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.col2-10-1,
+.col2-10-2,
+.col2-10-3 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.col2-10-3 {
+    justify-content: space-around;
+}
+
+.cor9-7,
+.cor7-7,
+.cor8-7,
+.cor8-8,
+.cor10-7,
+.cor10-10 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cor4-3,
+.cor4-4 {
+    align-self: flex-end;
+}
+
+.inverso {
+    transform: rotateZ(180deg);
+}
+
+@-moz-document url-prefix() {
+    .columna1,
+    .columna3 {
+        font-size: 14px;
+        margin: 5px;
+    }
+    .columna2 {
+        margin: 10px 0 10px;
+        font-size: 30px;
+    }
+    .cor9-7,
+    .cor7-7,
+    .cor8-7,
+    .cor8-8,
+    .cor10-7,
+    .cor10-10 {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}

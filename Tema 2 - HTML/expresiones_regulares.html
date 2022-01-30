@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yo">
+    <meta name="language" lang="es-ES">
+    <meta name="keywords" content="computers,programming,web design,html,html5,forms,form">
+    <meta name="description" content="Mi segunda página web con formularios">
+    <link rel="stylesheet" href="./introduccion.css">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png" sizes="32x32">
+    <title>Expresiones regulares</title>
+</head>
+
+<body>
+    <main>
+        <form name="formulario" method="post" action="formularios.php">
+            <fieldset>
+                <legend>Validación de datos</legend>
+                <!--<label for="expreg">Introduce el valor: <br>
+                                    -Comienza por letra mayúscula <br>
+                                    -Seguido de al menos un número impar <br>
+                                    -Finaliza con 2 o más letras minúsculas <br>
+                                    -Longitud mínima >= 8 caracteres <br>
+                </label>
+                <input type="text" name="expreg" id="expreg" size="20" maxlength="20" pattern="(?={8,}$)[A-Z][13579].*[a-z]{2}" required> -->
+                <!--<label for="expreg2">Introduce el valor 2: <br>
+                    -Inicia con 1 o 2 letras; mayúsculas o minúsculas<br>
+                    -Tiene que incluir el caracter @, pero no al principio ni al final<br>
+                    -No puede aparecer ningún espacio ni ningún dígito mayor o igual a 6<br>
+                    -Finaliza con un número <br>
+                </label> 
+                <input type="text" name="expreg2" id="expreg2" size="20" maxlength="20" pattern="[a-zA-Z]{1-2}[^6-9\s]*@[^6-9\s]*[0-5]" required> -->
+                <!-- <label for="expreg3">Introduce el valor 3: <br>
+                                    -Solo numerico <br>
+                                    -Sucesion de un numero par seguido de un numero impar <br>
+                                    -No puede comenzar por 0 ni terminar por 9 <br>
+                                    -Entre cada pareja de numeros podria aparecer opcionalmente un punto<br>
+                </label>
+                <input type="text" name="expreg3" id="expreg3" size="20" maxlength="20" pattern="[2468]([13579]\.?[02468])*[1357]" required> -->
+                <!--<label for="expreg4">Introduce el valor 4: <br>
+                    -Palabras en minúscula con exactamente 3 vocales sin diptongos ni hiatos <br>
+                </label>
+                <input type="text" name="expreg4" id="expreg4" size="20" maxlength="20" pattern="[bcdfghjklmnpqrstvwxyz]*([aeiou][bcdfghjklmnpqrstvwxyz]+){2}[aeiou][bcdfghjklmnpqrstvwxyz]*" required> -->
+                <!-- <label for="expreg3">Introduce el valor 5: <br>
+                                    -Al menos 1 mayuscula <br>
+                                    -Al menos 1 minuscula <br>
+                                    -Al menos 1 numero <br>
+                                    -8 o mas caracteres<br>
+                </label>
+                <input type="text" name="expreg5" id="expreg5" size="20" maxlength="20" pattern="(?=.{8,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*" required> -->
+                <!--<label for="expreg6">Introduce el valor 6: <br>
+                    -5 dígitos exactamente <br>
+                    -De 0 a 5 <br>
+                    -No puede aparecer el mismo digito en posiciones consecutivas <br>
+                </label>
+                <input type="text" name="expreg6" id="expreg6" size="20" maxlength="20" pattern="(?!.*(00|11|22|33|44|55))[0-5]{5}" required> -->
+                <!--<label for="expreg7">Introduce el valor 7: <br>
+                    -Cadena de vocales (mayusculas o minusculas), longitud minima 6 <br>
+                    -No podemos empezar con minusculas <br>
+                    -No podemos acabar con una mayuscula <br>
+                    -No podemos tener dos minusculas seguidas de una mayuscula <br>
+                </label>
+                <input type="text" name="expreg7" id="expreg7" size="20" maxlength="20" pattern="(?=.{6,}$)(?!.*[aeiou][aeiou][AEIOU])([AEIOU][aeiouAEIOU]*[aeiou])" required> -->
+                <!-- <label for="expreg8">Introduce el valor 8: <br>
+                    -Cadena de 6 caracteres o mas <br>
+                    -No puede incluir caracteres no alfanumericos <br>
+                    -No puede presentar 2 digitos consecutivos ni dos mayusculas consecutivas <br>
+                </label>
+                <input type="text" name="expreg8" id="expreg8" size="20" maxlength="20" pattern="(?={6,}$)(?!.*([0-9][0-9]|[A-Z][A-Z]))\w+" required>
+                <input type="submit" value="Enviar"> -->
+                <!--<label for="expreg9">Introduce el valor 9: <br>
+                    -Entre 6 y 8 caracteres <br>
+                    -Solo letras mayusculas y numeros <br>
+                    -Cada letra de ir seguida de al menos 2 numeros <br>
+                    -La cadena debe terminar en un numero par <br>
+                </label>
+                <input type="text" name="expreg9" id="expreg9" size="20" maxlength="20" pattern="(?=.{6,8}$)([0-9]*[02468]|[0-9]*([A-Z]([0-9][0-9]+))[A-Z]([0-9]+[02468]))" required>
+                <input type="submit" value="Enviar">-->
+                <!-- <label for="expreg10">Introduce el valor 10: <br>
+                    -De 3 a 6 caracteres <br>
+                    -Debe aparecer algún número de 0 a 5; pero a parte cualquier numero <br>
+                    -Debe aparecer alguna vocal <br>
+                    -Solamente letras minusculas y numeros <br>
+                    -No puede aparecer una vocal seguida de 0 <br>
+                </label>
+                <input type="text" name="expreg10" id="expreg10" size="20" maxlength="20" pattern="(?=.{3,6}$)(?=.*[0-5])(?=.*[aeiou])(?!.*[aeiou]0)[a-z0-9]+" required>
+                <input type="submit" value="Enviar"> -->
+                <!--<label for="expreg11">Introduce el valor 11: <br>
+                    -Como maximo, 5 caracteres <br>
+                    -Solamente caracteres alfanumericos <br>
+                    -Debe aparecer 2 o mas digitos iguales consecutivos <br>
+                    -No deben aparecer 3 vocales consecutivos <br>
+                </label>
+                <input type="text" name="expreg11" id="expreg11" size="20" maxlength="20" pattern="(?=.{2,5}$)(?=.*(00|11|22|33|44|55|66|77|88|99))(?!.*([aeiou][aeiou][aeiou]|[AEIOU][AEIOU][AEIOU]))\w+" required> -->
+                <input type="text" name="expreg11" id="expreg11" size="20" maxlength="20" pattern="(?=.{8,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?!.*(00|11|22|33|44|55|66|77|88|99))\w{1,}.*\w{1,}" required>
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lavender;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    background-color: darkslateblue;
+    margin: 10vh 5vw;
+    width: 90vw;
+    /*height: 80vh;*/
+    /*overflow: hidden;*/
+}
+
+.contenedor::after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+h1 {
+    padding: 10px;
+    text-align: center;
+    color: lightyellow;
+}
+
+.caja1,
+.caja2,
+.caja3,
+.caja4 {
+    border: 3px solid blanchedalmond;
+    margin: 10px;
+}
+
+p {
+    padding: 15px;
+}
+
+.caja1 {
+    background-color: lightpink;
+    width: 50%;
+    height: 500px;
+    /*height: 80%;*/
+    float: left;
+}
+
+.caja2 {
+    background-color: skyblue;
+    width: 15%;
+    height: 25%;
+    float: left;
+}
+
+.caja3 {
+    background-color: lightgoldenrodyellow;
+    width: 25%;
+    height: 50%;
+    float: left;
+    clear: both;
+}
+
+.caja4 {
+    background-color: aquamarine;
+    width: 40%;
+    height: 30%;
+    float: left;
+}
+
+
+/*.vacio {
+    clear: both;
+}*/

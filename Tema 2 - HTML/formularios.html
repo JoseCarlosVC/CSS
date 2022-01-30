@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yo">
+    <meta name="language" lang="es-ES">
+    <meta name="keywords" content="computers,programming,web design,html,html5,forms,form">
+    <meta name="description" content="Mi segunda página web con formularios">
+    <link rel="stylesheet" href="./introduccion.css">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png" sizes="32x32">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <!-- En los formularios grandes aparece la etiqueta fieldset; sirve para agrupar elementos en cajas dentro del formulario 
+    A su vez, dentro de fieldset puede aparecer la etiqueta legend, la cual da un nombre al fieldset
+    
+    Las etiquetas label y labelfor sirven para dar un nombre a los inputs del formulario
+
+    Hay dos formas de usar la etiqueta label; una introduciendo el input dentro de la etiqueta label <label>Texto<input></label> (No se recomienda)
+    Y otra con las etiquetas separadas; <label>Texto</label><input> (Se recomienda) 
+    
+    La etiqueta labelfor tiene la siguiente estructura <label for="nombre">Etiqueta</label> <input name="nombre">. El nombre de for y de input name deben coincidir para relacionarse
+    También se recomienda usar la etiqueta id en input <input id="">
+
+    El elemento textarea es otro campo de formulario, aunque no se use como input <textarea></textarea>
+
+    El elemento <select> crea una lista desplegable de elementos <option>. A su vez las etiquetas <option> se pueden agrupar en grupos de opciones <optgroup>
+    
+    A la hora de validar los campos de introducción, usaremos el campo "pattern" que servirá para introducir expresiones regulares -->
+
+    <main id="contenido">
+        <form name="miformulario" method="POST" action="formularios.php">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <p>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre" id="nombre" size="15" maxlength="10" required>
+                </p>
+                <p>
+                    <label for="apellidos">Apellidos: </label>
+                    <input type="text" name="apellidos" id="apellidos" size="40" maxlength="40" required>
+                </p>
+                <p>
+                    <label for="nacimiento">Fecha de nacimiento: </label>
+                    <input type="date" name="nacimiento" id="nacimiento" value="2021-01-01" required>
+                </p>
+                <p>
+                    <label for="pass">Contraseña: </label>
+                    <input type="password" name="pass" id="pass" size="10" required autofocus>
+                </p>
+                <p>
+                    <label for="dni">Dni: </label>
+                    <input type="text" name="dni" id="dni" maxlength="10" size="10" pattern="[0-9]{8}(\s|(-))?[A-Z]{1}">
+                </p>
+                <p>
+                    <label for="matricula">Matrícula </label>
+                    <input type="text" name="matricula" id="matricula" maxlength="8" size="8" pattern="[0-9]{4}(\s|(-))?[BCDFGHJKLMNPRSTVWXYZ]{3}">
+                </p>
+                <fieldset>
+                    <legend>Género</legend>
+                    <p>
+                        <p>
+                            <label for="genero">Mujer</label>
+                            <input type="radio" name="genero" id="mujer" value="M">
+                        </p>
+                        <p>
+                            <label for="genero">Hombre</label>
+                            <input type="radio" name="genero" id="hombre" value="H">
+                        </p>
+                        <p>
+                            <label for="genero">Otro/Prefiero no responder</label>
+                            <input type="radio" name="genero" id="otro" value="O" checked>
+                        </p>
+                    </p>
+                </fieldset>
+                <p>
+                    <label for="correo">Dirección de correo electrónico: </label>
+                    <input type="email" name="correo" id="correo" size="30" value="correo@correo.com" disabled>
+                </p>
+                <p>
+                    <label for="web">Página web personal: </label>
+                    <input type="url" name="web" id="web" required placeholder="Introduzca una página web válida; incluyendo http" size="36">
+                </p>
+                <p>
+                    <label for="tlf">Número de teléfono: </label>
+                    <input type="tel" name="tlf" id="tlf" size="40" readonly value="9000000">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Otros datos</legend>
+                <p>
+                    <label for="numfav">Número par favorito: </label>
+                    <input type="number" name="numfav" id="numfav" min="0" max="100" size="5" step="2" value="4">
+                </p>
+                <p>
+                    <fieldset>
+                        <legend>Intereses personales: </legend>
+                        <p>
+                            <label for="deporte">Deporte</label>
+                            <input type="checkbox" name="deporte" id="deporte" value="deporte">
+                        </p>
+                        <p>
+                            <label for="videojuegos">Videojuegos</label>
+                            <input type="checkbox" name="videojuegos" id="videojuegos" value="videojuegos" checked>
+                        </p>
+                        <p>
+                            <label for="cine">Cine/TV</label>
+                            <input type="checkbox" name="cine" id="cine" value="cine" checked>
+                        </p>
+                        <p>
+                            <label for="libros">Lectura</label>
+                            <input type="checkbox" name="libros" id="libros" value="libros">
+                        </p>
+                    </fieldset>
+                    <p>
+                        <label for="turno">Turno de trabajo: </label>
+                        <select name="turno" id="turno">
+                            <option value="M">Turno de mañana</option>
+                            <option value="T" selected>Turno de tarde</option>
+                            <option value="N">Turno de noche</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="ciudad">Ciudad de procedencia: </label>
+                        <select name="ciudad" id="ciudad">
+                            <optgroup label="Andalucía">
+                                <option value="almeria">Almeria</option>
+                                <option value="malaga">Malaga</option>
+                                <option value="granada" selected>Granada</option>
+                                <option value="sevilla">Sevilla</option>
+                            </optgroup>
+                            <optgroup label="Galicia">
+                                <option value="orense">Orense</option>
+                                <option value="pontevedra">Pontevedra</option>
+                                <option value="lugo">Lugo</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p>
+                        <!--Lista de autocompletar-->
+                        <label for="marcas">Marca de teléfono móvil favorita: </label>
+                        <input type="text" list="marcas" spellcheck="false">
+                        <datalist id="marcas" name="marcas">
+                            <option value="Apple" label="Mierda">Apple</option>
+                            <option value="Huawei" label="Ilegal en América">Huawei</option>
+                            <option value="Samsung" label="Coreanos">Samsung</option>
+                            <option value="Xiaomi" label="chinos">Xiaomi</option>
+                            <option value="Oppo" label="chinos2">Oppo</option>
+                        </datalist>
+                    </p>
+                    <p>
+                        <!--Colores como tipo de dato-->
+                        <label for="colores">Mi color favorito: </label>
+                        <input type="color" name="colores" min="0" max="100" id="colores" value="#4F28C3">
+                    </p>
+                    <p>
+                        <!--Escala deslizante-->
+                        <label for="escala">Mi nivel de satisfacción con la asignatura es: </label>
+                        <input type="range" name="escala" id="escala" min="0" max="100" value="0">
+                    </p>
+                    <p>
+                        <label for="comentario">Comentarios: </label><br>
+                        <textarea id="comentario" name="comentario" rows="5" cols="40" spellcheck="true"></textarea>
+                    </p>
+                    <p>
+                        <label for="archivo">Subir archivo: </label>
+                        <input type="file" name="archivo" id="archivo">
+                    </p>
+                    <!-- 
+                        /Expresiones regulares:
+                        /* 0 o más veces
+                        /+ 1 o más veces
+                        /? 0 o 1 vez
+                        /[-] Cualquier valor contenido dentro de un rango
+                        /{-} Longitud mínima y máxima de una cadena. Por ejemplo: {1,5}: de uno a 5 caracteres. {2}: exactamente 2 caracteres. {3,}: 3 o más caracteres
+                        /[0-9]{5}: Cinco caracteres de 0 a 9
+                        /(-|-) Cualquiera de los dos bloques en el parentesis es valido
+                        /. Una ocurrencia de un caracter cualquiera, exactamente 1
+                        /Para escribir uno de estos caracteres como tal, se usara la contrabarra \. \{ \(
+                        /Para un espacio en blanco o tabulación \s
+                        / \S todos los caracteres excepto un espacio en blanco o tabulacion
+                        /Por ejemplo para escribir un DNI sería: [0-9]{8}(\s|(-))?[A-Z]{1}
+                        /Para excluir un caracter o numero: [^0][0-9]{7}
+                        / \1 primera expresion evaluada
+                        / \d cualquier digito de 0 a 9
+                        / \D cualquier caracter no digito
+                        / \w todas las letras mayusculas o minusculas digitos y _
+                        / \W contrario a la w
+                        / \s espacio en blanco o tabulacion
+                        / \S ni espacio ni tabulacion
+                        / Lookahead predictions: 
+                            /Positive lookahead
+                                /(?=expresion)
+                                /aparece en el principio de la expresion regular, durante toda la expresion regular debe cumplirse la condicion que aparece
+                                /cuando se utiliza una longitud se usa el dolar, a continuacion de la longitud (?={8,}$)
+                            /Negative lookahead:
+                                /(?! expresion)
+                                /durante toda la expresion regular, no debe aparecer la expresion
+                    -->
+                </p>
+            </fieldset>
+            <p>
+                <div>
+                    <input type="submit" value="Enviar">
+                    <hr>
+                    <input type="reset" value="Borrar todo">
+                </div>
+            </p>
+            <!-- Audio y video 
+                Propiedades:
+                controls: booleano; si esta presente ofrece los controles de video
+                autoplay: booleano; si esta presente se reproduce automaticamente
+                muted: booleano; por defecto aparecera en silencio
+                loop; booleano; si aparece se repite el video
+            -->
+            <!-- Iframe: para colocar contenido de otra pagina web dentro de otra -->
+            <p>
+                <div>
+
+                </div>
+            </p>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /*
+    Colores: 
+    paleturquoise
+    lavender
+    royalblue
+    darkorchid
+    mediumvioletred
+    lemonchiffon
+    tomato
+    mistyrose
+    mediumpurple
+    coral
+    red
+    orange
+    darkgreen
+    peachpuff
+    teal
+    green
+    gray
+    rebeccapurple
+    */
+}
+
+body {
+    background-color: paleturquoise;
+}
+
+h1 {
+    text-align: center;
+    color: royalblue;
+}
+
+legend {
+    color: royalblue;
+    font-weight: bold;
+}
+
+fieldset {
+    margin: 20px 100px;
+    background-color: lavender;
+}
+
+fieldset>h1 {
+    text-align: left;
+    font-style: italic;
+    color: darkorchid;
+    margin: 10px;
+}
+
+form>fieldset>label {
+    color: darkgreen;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-left: 10px;
+}
+
+form>fieldset>input {
+    margin: 12px 5px;
+}
+
+fieldset>fieldset {
+    margin: 10px;
+    padding: 10px;
+    background-color: peachpuff;
+}
+
+fieldset>fieldset>p>label {
+    font-style: italic;
+    color: teal;
+}
+
+input[value="36-45"] {
+    box-shadow: 0px 0px 5px green;
+}
+
+label[for="edad"] {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+input[name="edad"]:checked+[for="edad"] {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    background-color: mistyrose;
+}
+
+::placeholder {
+    font-style: italic;
+    color: mediumvioletred;
+}
+
+input[pattern] {
+    border: 5px darkorchid solid;
+}
+
+input[pattern]:invalid {
+    background-color: tomato;
+}
+
+input[name="color"]:first-of-type {
+    margin-left: 15px;
+}
+
+label[for="color"] {
+    margin-left: 0;
+    margin-right: 3px;
+    color: rebeccapurple;
+}
+
+input[name="color"]:checked+label {
+    color: green;
+}
+
+form>fieldset>p>label {
+    margin-left: 15px;
+    color: green;
+    font-weight: bolder;
+}
+
+input[value="diw"] {
+    box-shadow: 2px 2px 2px orange;
+}
+
+input[type="number"] {
+    background-color: lemonchiffon;
+}
+
+form>p {
+    text-align: center;
+}
+
+form>p>input {
+    border-radius: 10px;
+    background-color: lemonchiffon;
+    height: 45px;
+    padding: 10px;
+    font-size: large;
+}
+
+input[type="submit"] {
+    color: royalblue;
+    font-weight: bold;
+}
+
+input[type="reset"] {
+    color: gray;
+}

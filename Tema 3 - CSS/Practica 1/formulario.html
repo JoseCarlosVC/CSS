@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./formulario.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="formulario.php" method="post">
+        <h1>Introduzca datos</h1>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre: </label>
+            <input type="text" size="10" name="nombre" placeholder="Obligatorio" required><br>
+            <label for="apellidos">Apellidos: </label>
+            <input type="text" size="25" name="apellidos" required placeholder="Obligatorio"><br>
+            <fieldset>
+                <legend>Edad:</legend>
+                <input type="radio" name="edad" id="18-25" value="18-25">
+                <label for="edad">18 a 25  </label>
+                <input type="radio" name="edad" id="26-35" value="26-35">
+                <label for="edad">26 a 35  </label>
+                <input type="radio" name="edad" id="36-45" value="36-45">
+                <label for="edad">36 a 45  </label>
+                <input type="radio" name="edad" id="46-55" value="46-55">
+                <label for="edad">46 a 55  </label>
+                <input type="radio" name="edad" id="55plus" value="55plus">
+                <label for="edad">Mayor de 55  </label>
+                <input type="radio" name="edad" id="ns" value="ns" checked>
+                <label for="edad">NS/NC  </label>
+            </fieldset>
+            <fieldset>
+                <legend>Intereses:</legend>
+                <p>
+                    <label for="arte">Arte y Literatura</label>
+                    <input type="checkbox" name="arte" value="arte">
+                </p>
+                <p>
+                    <label for="ciencia">Ciencia y Tecnología</label>
+                    <input type="checkbox" name="ciencia" value="ciencia">
+                </p>
+                <p>
+                    <label for="politica">Política y Sociedad</label>
+                    <input type="checkbox" name="politica" value="politica">
+                </p>
+                <p>
+                    <label for="ocio">Ocio y Deporte</label>
+                    <input type="checkbox" name="ocio" value="ocio">
+                </p>
+                <p>
+                    <label for="cinte">CINTE y Televisión</label>
+                    <input type="checkbox" name="cinte" value="cinte">
+                </p>
+            </fieldset>
+            <label for="postal">Código postal: </label>
+            <input type="text" value="000" size="5" name="postal" pattern="(?=.{5}$)(?=.[0-9]).*">
+        </fieldset>
+        <fieldset>
+            <legend>Otros datos</legend>
+            <h1>Color favorito</h1>
+            <input type="radio" checked name="color" id="rojo" value="rojo">
+            <label for="color">Rojo  </label>
+            <input type="radio" name="color" id="azul" value="azul">
+            <label for="color">Azul  </label>
+            <input type="radio" name="color" id="amarillo" value="amarillo">
+            <label for="color">Amarillo  </label>
+            <input type="radio" name="color" id="verde" value="verde">
+            <label for="color">Verde  </label>
+
+            <h1>Asignaturas favoritas</h1>
+            <p>
+                <label for="dwec">DWEC</label>
+                <input type="checkbox" name="dwec" value="dwec">
+            </p>
+            <p>
+                <label for="dwes">DWES</label>
+                <input type="checkbox" name="dwes" value="dwes">
+            </p>
+            <p>
+                <label for="diw">DIW</label>
+                <input type="checkbox" checked name="diw" value="diw">
+            </p>
+            <p>
+                <label for="daw">DAW</label>
+                <input type="checkbox" name="daw" value="daw">
+            </p>
+            <p>
+                <label for="eiem">EIEM</label>
+                <input type="checkbox" name="eiem" value="eiem">
+            </p>
+            <h1>Probabilidad de aprobar</h1>
+            <label for="porcentaje">Porcentaje</label>
+            <input type="number" size="4" min="0" max="100" value="50">
+
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar formulario">
+            <input type="reset" value="Reiniciar formulario">
+        </p>
+
+    </form>
+</body>
+
+</html>

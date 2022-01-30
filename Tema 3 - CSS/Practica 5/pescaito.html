@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pescaito.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor" id="inicio">
+        <h1>Bar-restaurante</h1>
+        <h1>El pescaito frito</h1>
+        <div>
+            <a href="#entrantes">
+                <div class="imagenes" id="entra">
+                    Entrantes
+                </div>
+            </a>
+            <a href="#pescados">
+                <div class="imagenes" id="pesc">
+                    Pescados
+                </div>
+            </a>
+            <a href="#mariscos">
+                <div class="imagenes" id="mar">
+                    Mariscos
+                </div>
+            </a>
+            <a href="#pulpos">
+                <div class="imagenes" id="pul">
+                    Pulpos
+                </div>
+            </a>
+            <a href="#carnes">
+                <div class="imagenes" id="car">
+                    Carnes
+                </div>
+            </a>
+            <a href="#postres">
+                <div class="imagenes" id="pos">
+                    Postres
+                </div>
+            </a>
+            <!--
+            <a href="#entrantes"><img src="./img/entrantes.jpeg"></a>
+            <a href="#pescados"><img src="./img/pescados.jpeg"></a>
+            <a href="#mariscos"><img src="./img/mariscos.jpeg"></a>
+            <a href="#pulpos"><img src="./img/pulpos.jpeg"></a>
+            <a href="#carnes"><img src="./img/carnes.jpeg"></a>
+            <a href="#postres"><img src="./img/postres.jpeg"></a>
+        -->
+        </div>
+        <h2 id="entrantes">Entrantes</h2>
+        <hr class="titulo">
+        <table>
+            <tr>
+                <td class="comida" colspan="2">Patatas Fritas</td>
+                <td class="precio">3,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Berenjenas Fritas</td>
+                <td class="alergias"><span class="gluten">B</span></td>
+                <td class="precio">5,00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Ensalada Mixta (1 pers)</td>
+                <td class="precio">5,00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Ensalada Mixta (2 pers)</td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Ensaladilla Rusa</td>
+                <td class="alergias"><span class="huevo">A</span><span class="pescado">O</span></td>
+                <td class="precio">6,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Ensalada Variada (1 pers)</td>
+                <td class="alergias"><span class="molusco">P</span><span class="huevo">A</span><span class="pescado">O</span></td>
+                <td class="precio">6,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Ensalada Variada (2 pers)</td>
+                <td class="alergias"><span class="molusco">P</span><span class="huevo">A</span><span class="pescado">O</span></td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Ensalada de pimientos</td>
+                <td class="precio">6,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Patatas a la Brava</td>
+                <td class="alergias"><span class="huevo">A</span><span class="gluten">B</span></td>
+                <td class="precio">6,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Paella</td>
+                <td class="alergias"><span class="pescado">O</span><span class="gluten">B</span><span class="molusco">P</span></td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Caracoles</td>
+                <td class="alergias"><span class="gluten">B</span></td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Ensalada de Pulpo</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Ensalada Tropical</td>
+                <td class="alergias"><span class="huevo">A</span> <span class="pescado">O</span></td>
+                <td class="precio">3,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Ensalada AliOli</td>
+                <td class="alergias"><span class="huevo">A</span></td>
+                <td class="precio">6,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Ensalada Mejillones</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Ensalada de Delicias</td>
+                <td class="alergias"> <span class="pescado">O</span> </td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Croquetas de pollo</td>
+                <td class="alergias"> <span class="gluten">B</span> <span class="lacteos">I</span> </td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Croquetas de Marisco</td>
+                <td class="alergias"><span class="crustaceo">F</span><span class="gluten">B</span><span class="lacteos">I</span><span class="huevo">A</span> </td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Croquetas de Choco</td>
+                <td class="alergias"><span class="molusco">P</span><span class="gluten">B</span><span class="lacteos">I</span><span class="huevo">A</span></td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Anchoas</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">12,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Patatas AliOli</td>
+                <td class="alergias"><span class="huevo">A</span></td>
+                <td class="precio">6,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Mejillones Rellenos</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Boquerones en Vinagre</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td colspan="3"><a href="#inicio">Inicio</a></td>
+            </tr>
+        </table>
+        <h2 id="pescados">Pescados</h2>
+        <hr class="titulo">
+        <table>
+            <tr>
+                <td class="comida">Cazón en Adobo</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Boquerones en Adobo</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Boquerones al Limón</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Boquerones Fritos</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Pijotas Fritas</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Salmonetes Fritos</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Acedías Fritas</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Huevas Fritas</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Choco Frito</td>
+                <td class="alergias"><span class="gluten">B</span><span class="molusco">P</span></td>
+                <td class="precio">12,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Chipirones Fritos</td>
+                <td class="alergias"><span class="gluten">B</span><span class="molusco">P</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Calamares Fritos</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Fritura de Pescado 1 pers.</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Fritura de Pescado 2 pers.</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">18,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Fritura de Pescado 3 pers.</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">27,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Fritura de pesado 4 pers.</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">36,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Sama al Rigomonti</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">15,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Gallo al Chef</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span><span class="huevo">A</span></td>
+                <td class="precio">18,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Gallo a la plancha</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Gallineta</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Filetes de pez limón a la plancha</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Urta a la Espalda</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Voraces a la Espalda</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Dorada a la Espalda</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Lubina a la Espalda</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Rodaballo a la Plancha</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Lenguados a la Plancha</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Mero a la Espalda</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Atún a la Plancha</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Filete de Gallo a la Plancha</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Filete de Sama a la Plancha</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Filete de pez Espada a la Plancha</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Brocheta de Rape</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Brocheta de Rape</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">12,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Brótola</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Merluza Frita</td>
+                <td class="alergias"><span class="gluten">B</span><span class="pescado">O</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td colspan="3"><a href="#inicio">Inicio</a></td>
+            </tr>
+        </table>
+        <h2 id="mariscos">Mariscos</h2>
+        <hr class="titulo">
+        <table>
+            <tr>
+                <td class="comida">Langostinos</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Gambas a la Plancha</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Gambas Empanadas</td>
+                <td class="alergias"><span class="huevo">A</span><span class="crustaceo">F</span><span class="gluten">B</span></td>
+                <td class="precio">12,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Gambas al Pil-Pil</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">11,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Gambas al ajillo</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">11,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Gambas Fritas</td>
+                <td class="alergias"><span class="crustaceo">F</span><span class="gluten">B</span></td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Coquinas</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">11,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Almejas de Carril</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">13,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Cañaíllas de Pinchos</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">12,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Conchas Finas</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Mejillones al Vapor</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">10,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Bogavantes</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Langostas</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Centollos</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Changurro</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Carabinero</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Cigalas</td>
+                <td class="alergias"><span class="crustaceo">F</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td class="comida">Angulas</td>
+                <td class="alergias"><span class="pescado">O</span></td>
+                <td class="precio">s/m</td>
+            </tr>
+            <tr>
+                <td colspan="3"><a href="#inicio">Inicio</a></td>
+            </tr>
+        </table>
+        <h2 id="pulpos">Pulpos</h2>
+        <hr class="titulo">
+        <table>
+            <tr>
+                <td class="comida">Pulpo con Mayonesa</td>
+                <td class="alergias"><span class="molusco">P</span><span class="huevo">A</span></td>
+                <td class="precio">12,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Pulpo a la Gallega</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">13,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Pulpo a la Canaria</td>
+                <td class="alergias"><span class="molusco">P</span><span class="huevo">A</span><span class="gluten">B</span></td>
+                <td class="precio">12,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Pulpo a la Marinera</td>
+                <td class="alergias"><span class="molusco">P</span></td>
+                <td class="precio">13,00€</td>
+            </tr>
+            <tr>
+                <td colspan="3"><a href="#inicio">Inicio</a></td>
+            </tr>
+        </table>
+        <h2 id="carnes">Carnes</h2>
+        <hr class="titulo">
+        <table>
+            <tr>
+                <td class="comida" colspan="2">Corazones de pollo</td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Pinchos de pollo</td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Albóndigas con Tomate</td>
+                <td class="alergias"><span class="huevo">A</span><span class="gluten">B</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Solomillo a la Plancha</td>
+                <td class="precio">14,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Solomillo a la Pimienta</td>
+                <td class="alergias"><span class="lacteos">I</span></td>
+                <td class="precio">16,00€</td>
+            </tr>
+            <tr>
+                <td class="comida">Nuggets de Pollo</td>
+                <td class="alergias"><span class="huevo">A</span><span class="gluten">B</span></td>
+                <td class="precio">9,00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Kefta a la Plancha</td>
+                <td class="precio">8,00€</td>
+            </tr>
+            <tr>
+                <td colspan="3"><a href="#inicio">Inicio</a></td>
+            </tr>
+        </table>
+        <h2 id="postres">Postres</h2>
+        <hr class="titulo">
+        <table>
+            <tr>
+                <td class="comida" colspan="2">Fresas con nata</td>
+                <td class="precio">4.00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Nueces con nata y miel</td>
+                <td class="precio">4.00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Macedonia de Frutas Nat.</td>
+                <td class="precio">4.00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Flan de Huevo</td>
+                <td class="precio">3.00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Flan de Turrón</td>
+                <td class="precio">4.00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Natillas</td>
+                <td class="precio">3.00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Arroz con Leche</td>
+                <td class="precio">3.00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Yogur con Tocino de cielo</td>
+                <td class="precio">3.00€</td>
+            </tr>
+            <tr>
+                <td class="comida" colspan="2">Piña natural</td>
+                <td class="precio">4.00€</td>
+            </tr>
+            <tr>
+                <td colspan="3"><a href="#inicio">Inicio</a></td>
+            </tr>
+        </table>
+        <footer>
+            <table>
+                <tr>
+                    <td class="simbolo"><span class="soja">N</span></td>
+                    <td class="simbolo"><span class="pescado">O</span></td>
+                    <td class="simbolo"><span class="mostaza">C</span></td>
+                    <td class="simbolo"><span class="molusco">P</span></td>
+                    <td class="simbolo"><span class="lacteos">I</span></td>
+                    <td class="simbolo"><span class="huevo">A</span></td>
+                    <td class="simbolo"><span class="sesamo">M</span></td>
+                </tr>
+                <tr>
+                    <td class="texto">Soja</td>
+                    <td class="texto">Pescado</td>
+                    <td class="texto">Mostaza</td>
+                    <td class="texto">Moluscos</td>
+                    <td class="texto">Lácteos</td>
+                    <td class="texto">Huevos</td>
+                    <td class="texto">Granos de sésamo</td>
+                </tr>
+                <tr>
+                    <td class="simbolo"><span class="gluten">B</span></td>
+                    <td class="simbolo"><span class="seco">D</span></td>
+                    <td class="simbolo"><span class="azufre">Q</span></td>
+                    <td class="simbolo"><span class="crustaceo">F</span></td>
+                    <td class="simbolo"><span class="cacahuete">S</span></td>
+                    <td class="simbolo"><span class="apio">G</span></td>
+                    <td class="simbolo"><span class="altramuz">D</span></td>
+                </tr>
+                <tr>
+                    <td class="texto">Gluten</td>
+                    <td class="texto">Frutos secos</td>
+                    <td class="texto">Dióxido de azufre</td>
+                    <td class="texto">Crustáceos</td>
+                    <td class="texto">Cacahuetes</td>
+                    <td class="texto">Apio</td>
+                    <td class="texto">Altramuces</td>
+                </tr>
+            </table>
+        </footer>
+    </div>
+</body>
+
+</html>

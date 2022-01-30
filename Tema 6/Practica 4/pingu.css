@@ -1,0 +1,188 @@
+    * {
+        border: 0;
+        margin: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        background-color: blanchedalmond;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /** Barra fija **/
+    
+    h3 {
+        font-size: 1em;
+    }
+    
+    .pega {
+        text-align: center;
+        background-color: darkgoldenrod;
+        color: azure;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    
+    .fab {
+        color: azure;
+    }
+    /** Cabecera **/
+    
+    header {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 100%;
+        margin-top: 5vh;
+    }
+    
+    .logo {
+        margin-left: 1%;
+        flex: 1 0 36%;
+    }
+    
+    .logo-img {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .texto-logo {
+        flex: 1 0 63%;
+    }
+    
+    h1 {
+        display: flex;
+        color: darkcyan;
+    }
+    /** Barra de navegación **/
+    
+    nav {
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }
+    
+    .nav-link {
+        margin: 0 2px 1vh;
+        flex: 1 0 16%;
+        border: 1px solid pink;
+        background-color: plum;
+        padding: 10px;
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    /** Contenedor principal **/
+    
+    main {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+    }
+    
+    .titulo-col {
+        color: darkcyan;
+        font-size: 1em;
+        margin-bottom: 1vh;
+    }
+    /** Columna Izquierda **/
+    
+    .col1 {
+        margin: 0 0.5% 0;
+        flex: 1 0 29%;
+        width: 29%;
+    }
+    
+    .trivia:nth-child(odd) {
+        margin: 1vh 1vw;
+        background-color: #ffffff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2380F'/%3E%3Cstop offset='1' stop-color='%23f40'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='10' cy='10' r='10'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.1'/%3E%3C/svg%3E");
+        background-attachment: fixed;
+        border: 5px solid forestgreen;
+        border-radius: 5px;
+        padding: 5px;
+        width: 65%;
+        float: right;
+        overflow: hidden;
+    }
+    
+    .trivia:nth-child(odd)>.trivia-titulo {
+        text-align: center;
+        background-color: rgba(59, 207, 139, 0.6);
+        padding: 10px;
+        font-size: 1.5em;
+        color: rgb(207, 162, 234);
+        border-radius: 5px;
+        margin: 1vh 1vw;
+    }
+    
+    .trivia:nth-child(odd)>.texto-trivia {
+        color: rgb(107, 185, 255);
+        text-align: justify;
+        margin-top: 1vh;
+    }
+    
+    .trivia:nth-child(even) {
+        background-color: #77aa77;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(13,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.53'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: local;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 5px solid paleturquoise;
+        border-radius: 5px;
+        padding: 5px;
+        width: 65%;
+        float: left;
+        overflow: hidden;
+    }
+    
+    .trivia:nth-child(even)>.trivia-titulo {
+        text-align: center;
+        background-color: rgba(207, 162, 234, 0.7);
+        padding: 10px;
+        font-size: 1.5em;
+        color: rgb(255, 173, 127);
+        border-radius: 5px;
+        margin: 1vh 1vw;
+    }
+    
+    .trivia:nth-child(even)>.texto-trivia {
+        color: rgb(156, 86, 154);
+        text-align: justify;
+        margin-top: 1vh;
+    }
+    /** Columna Central **/
+    
+    .col2 {
+        flex: 1 0 40%;
+    }
+    
+    .contributor {
+        margin: 1vh 0;
+        border: 1px solid darkcyan;
+    }
+    
+    .img-contributor {
+        width: 100%;
+        float: left;
+    }
+    
+    .img-contributor>img {
+        width: 100px;
+        height: 100px;
+    }
+    /** Columna Derecha **/
+    
+    .col3 {
+        margin: 0 1% 0;
+        flex: 1 0 28%;
+    }
+    
+    .img-places {
+        width: 100%;
+    }
+    
+    .img-places>img {
+        width: 120px;
+        height: 120px;
+    }

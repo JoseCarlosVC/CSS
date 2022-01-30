@@ -1,0 +1,151 @@
+/*
+    Colores:
+    darkseagreen
+    gainsboro
+    darkslategrey
+    seagreen
+    grey
+    yellowgreen
+    whitesmoke
+    lightslategray
+    hotpink
+    rbg(85,52,9) #553409
+    rbg(69,90,27) #455a1b
+
+    Tipografías:
+    Fredoka One - Títulos
+    Domine - Texto
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+* {
+    font-family: 'Domine', serif;
+    padding: 0;
+    margin: 0;
+    color: darkslategrey;
+}
+
+body {
+    background-color: darkseagreen;
+    width: 99vw;
+    height: 100vh;
+}
+
+header {
+    background-color: gainsboro;
+    border-radius: 10px;
+    width: 75vw;
+    margin: 1vh auto;
+    text-align: center;
+    padding-bottom: 1vh;
+}
+
+main {
+    width: 75vw;
+    margin: 1vh auto;
+}
+
+h1,
+h2 {
+    font-family: 'Fredoka One', cursive;
+}
+
+h1 {
+    font-size: 6vw;
+}
+
+h2 {
+    padding: 0 0.5vw;
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+img {
+    border: 5px solid darkslategrey;
+    display: block;
+    margin: 0 auto;
+    width: 42vw;
+}
+
+p {
+    text-align: left;
+    margin: 0 2vw 1vh;
+    font-size: 2vh;
+    padding: 2vh 4vw 3vh;
+}
+
+article>p {
+    color: whitesmoke;
+    line-height: 4vh;
+}
+
+header>p {
+    padding: 1.5vh 2vw;
+}
+
+div {
+    padding: 0.5vh 0.5vw;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    width: 75vw;
+    margin: 1vh auto;
+}
+
+article {
+    background-color: seagreen;
+}
+
+article>p::first-letter {
+    font-size: 3.5vh;
+    color: #553409;
+}
+
+a {
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+a:visited {
+    color: #455a1b;
+}
+
+a:hover {
+    color: orange;
+    font-size: 2.5vh;
+    text-shadow: 1px 1px 10px hotpink;
+}
+
+article>div {
+    border: 10px solid lightslategray;
+    border-radius: 0;
+    width: 60vw;
+    margin: 1vh 5vw;
+    background-color: darkslategrey;
+    padding: 2vh;
+    padding-bottom: 0;
+    text-indent: 1vw;
+}
+
+article>div:hover {
+    background-color: #073721;
+    border-color: yellowgreen;
+}
+
+li {
+    color: whitesmoke;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2vh;
+}
+
+footer {
+    margin: 2vh 10vw 2vh;
+    text-align: center;
+    border-top: 5px solid whitesmoke;
+    border-bottom: 5px solid whitesmoke;
+    padding: 2vh 2vw;
+    background-color: lightslategrey;
+    color: black;
+    font-weight: bolder;
+}

@@ -1,0 +1,86 @@
+{
+  "soja": {
+    "prefix": "soja",
+    "body": [
+      "<span class=\"soja alergias\">N</span>"
+    ]
+  },
+  "gluten": {
+    "prefix": "gluten",
+    "body": [
+      "<span class\"gluten alergias\">B</span>"
+    ]
+  },
+  "pescado": {
+    "prefix": "pescado",
+    "body": [
+      "<span class=\"pescado alergias\">O</span>"
+    ]
+  },
+  "mostaza": {
+    "prefix": "mostaza",
+    "body": [
+      "<span class=\"mostaza alergias\">C</span>"
+    ]
+  },
+  "moluscos": {
+    "prefix": "molusco",
+    "body": [
+      "<span class=\"molusco alergias\">P</span>"
+    ]
+  },
+  "lacteos": {
+    "prefix": "lacteos",
+    "body": [
+      "<span class=\"lacteos alergias\">I</span>"
+    ]
+  },
+  "huevos": {
+    "prefix": "huevos",
+    "body": [
+      "<span class=\"huevo alergias\">A</span>"
+    ]
+  },
+  "sesamo": {
+    "prefix": "sesamo",
+    "body": [
+      "<span class=\"sesamo alergias\">M</span>"
+    ]
+  },
+  "seco": {
+    "prefix": "seco",
+    "body": [
+      "<span class=\"seco alergias\">D</span>"
+    ]
+  },
+  "azufre": {
+    "prefix": "azufre",
+    "body": [
+      "<span class=\"azufre alergias\">Q</span>"
+    ]
+  },
+  "crustaceos": {
+    "prefix": "crustaceos",
+    "body": [
+      "<span class=\"crustaceo alergias\">F</span>"
+    ]
+  },
+  "cacahuetes": {
+    "prefix": "cacahuetes",
+    "body": [
+      "<span class=\"cacahuete alergias\">S</span>"
+    ]
+  },
+  "apio": {
+    "prefix": "apio",
+    "body": [
+      "<span class=\"apio alergias\">G</span>"
+    ]
+  },
+  "altramuz": {
+    "prefix": "altramuz",
+    "body": [
+      "<span class=\"altramuz alergias\">D</span>"
+    ]
+  }
+}
