@@ -57,7 +57,7 @@ h1 {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     /*grid-template-columns: repeat(3, 1fr);*/
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     /*grid-template: repeat(3, 200px)/repeat(4, 200px);*/
     /* grid-template-areas: "area1 area1 . . ." ". area6 area6 area6 area6" "area12 area12 . area9 area9" "area12 area12 . . .";*/
     /*  justify-items: start;
@@ -69,6 +69,9 @@ h1 {
     /*align-content: space-around;
     justify-content: space-between;*/
     place-content: start end;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: space-evenly;
 }
 
 .container>div {
@@ -77,7 +80,7 @@ h1 {
     text-align: center;
     /*width: 150px;*/
     /*height: 150px;*/
-    padding: 60px;
+    /*padding: 60px;*/
 }
 
 .c1 {
@@ -90,8 +93,8 @@ h1 {
     grid-row-end: 3;*/
     /*grid-row: 2/3;*/
     /* grid-row abreviada*/
-    grid-column: 2/span 3;
-    grid-row: 2/3;
+    grid-column: 4 / span 2;
+    grid-row: 1 / 2;
     background-color: blueviolet;
 }
 
@@ -101,9 +104,13 @@ h1 {
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end: 4;*/
-    grid-column: 3/span 2;
-    grid-row: 3/4;
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
     background-color: blueviolet;
+    /*align-self: center;
+    justify-self: center;*/
+    /* Propiedad abreviada*/
+    /*place-self: center end;*/
 }
 
 .c3 {
@@ -112,21 +119,19 @@ h1 {
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2;*/
-    grid-column: 2/3;
-    grid-row: 3/span 2;
+    grid-column: 1/2;
+    grid-row: 1/ span 2;
     background-color: blueviolet;
 }
 
-
-/*
 .c4 {
-    grid-area: area4;
+    /*    grid-area: area4;*/
+    grid-area: 3/5/4/6;
 }
 
 .c5 {
-    grid-area: area5;
+    grid-column: 2/span 3;
 }
-*/
 
 
 /*
@@ -136,36 +141,41 @@ h1 {
 }
 
 
-/*
+*/
+
 .c7 {
-    grid-area: area7;
+    /*grid-area: area7;*/
+    grid-area: 4/5/5/6;
 }
 
 .c8 {
-    grid-area: area8;
+    /*  grid-area: area8;*/
+    grid-column: 3/4;
+    grid-row: 1/2;
 }
-*/
 
-
-/*
 .c9 {
-    grid-area: area9;
     background-color: paleturquoise;
+    grid-column: 2/3;
+    grid-row: 3/span 2;
 }
-
-
-/*
 
 .c10 {
-    grid-area: area10;
+    /*    grid-area: area10;*/
+    /*grid-row: 1/2;
+    grid-column: 2/3;*/
+    grid-area: 1/6/2/7;
 }
 
 .c11 {
-    grid-area: area11;
-}*/
+    /* grid-area: area11;*/
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
 
-
-/*.c12 {
-    grid-area: area12;
-    background-color: paleturquoise;
-}*/
+.c12 {
+    /*   grid-area: area12;
+    background-color: paleturquoise;*/
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
