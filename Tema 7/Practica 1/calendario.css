@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1003%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(81%2c 46%2c 95%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c685.135C124.664%2c705.409%2c236.75%2c596.031%2c324.942%2c505.619C402.14%2c426.478%2c408.541%2c307.727%2c462.351%2c211.149C522.624%2c102.973%2c659.975%2c29.013%2c659.489%2c-94.82C659.004%2c-218.461%2c541.08%2c-305.247%2c459.96%2c-398.558C378.971%2c-491.718%2c310.264%2c-626.887%2c187.319%2c-637.95C61.887%2c-649.237%2c-18.127%2c-504.203%2c-132.686%2c-451.887C-225.134%2c-409.668%2c-351.784%2c-439.292%2c-417.483%2c-361.751C-483.168%2c-284.226%2c-432.335%2c-163.968%2c-459.574%2c-66.077C-492.664%2c52.84%2c-640.597%2c156.949%2c-593.574%2c271.076C-547.156%2c383.736%2c-363.383%2c340.22%2c-263.447%2c409.932C-157.139%2c484.089%2c-127.936%2c664.329%2c0%2c685.135' fill='%2341254c'%3e%3c/path%3e%3cpath d='M1440 1041.559C1552.504 1031.042 1670.476 1126.83 1770.502 1074.271 1870.321 1021.821 1892.421 890.121 1930.316 783.92 1965.325 685.809 1992.502 585.719 1981.8029999999999 482.1 1970.807 375.61 1929.501 276.622 1868.826 188.42000000000002 1802.564 92.09699999999998 1731.356-17.533999999999992 1618.1100000000001-46.587999999999965 1505.414-75.50099999999998 1400.95 15.337999999999965 1287.07 39.16700000000003 1160.055 65.745 1007.9359999999999 15.408999999999992 910.771 101.42099999999999 813.305 187.7 811.383 338.461 802.279 468.31 793.684 590.896 814.955 710.5409999999999 860.049 824.855 907.138 944.2239999999999 947.047 1095.094 1067.251 1140.009 1190.121 1185.92 1309.402 1053.767 1440 1041.559' fill='%23613772'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1003'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    width: 60%;
+    margin: 1% 20%;
+    background-color: white;
+    border: 3px solid salmon;
+    border-radius: 1%;
+}
+
+h1 {
+    margin: 1%;
+    text-align: center;
+    font-size: 4em;
+}
+
+.semana {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    justify-items: center;
+    background-color: aqua;
+    margin: 0 5%;
+    border-radius: 5px;
+}
+
+.semana>div {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(80px, 1fr));
+    grid-template-rows: repeat(5, minmax(80px, 1fr));
+    justify-items: center;
+}
+
+.dia {
+    font-size: 2em;
+    background-color: tomato;
+    border-radius: 10%;
+    margin: 5%;
+    align-self: center;
+    box-shadow: 10px 5px 5px black;
+    grid-column-start: 3;
+    /**Primer hijo*/
+}
+
+.finde {
+    font-weight: bold;
+}
+
+.festivo {
+    font-weight: bold;
+}
