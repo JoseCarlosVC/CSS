@@ -3,3 +3,159 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='45' height='51.96' patternTransform='scale(2) rotate(10)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(27, 10%, 82%, 1)'/><path d='M52.48 44.47a15 15 0 01-14.96 0 15 15 0 00-7.48 12.96M7.48 44.42a15 15 0 01-14.96 0M15 57.44c0-5.35-2.9-10.35-7.52-13.02a15 15 0 017.48-12.97M7.48 18.5a14.97 14.97 0 01-14.98-.03m15.02-.03A15 15 0 0115 5.47a15 15 0 00-4.4-10.62m23.8.05A15 15 0 0030 5.53a15 15 0 017.48 12.96 14.9 14.9 0 0015.02-.03m-22.5 13a15.13 15.13 0 017.52 13.01m-7.56-39a15 15 0 01-14.96 0M7.48 18.5a15 15 0 017.48 12.96 15 15 0 0015.04 0 15 15 0 017.48-12.96'  stroke-width='1.5' stroke='hsla(1, 75%, 64%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 90%;
+    margin: 5% auto;
+    grid-gap: 3px;
+}
+
+.container>div {
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    align-content: center;
+}
+
+.dia {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #00607D;
+}
+
+.dia:first-child {
+    grid-column-start: 3;
+}
+
+.horas {
+    grid-column: 1/span 2;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #00607D;
+}
+
+.daw-lunes {
+    grid-column: 3;
+    grid-row: 2/span 2;
+}
+
+.dwec-lunes {
+    grid-column: 3;
+    grid-row: 4/span 2;
+}
+
+.dwes-lunes {
+    grid-column: 3;
+    grid-row: 6/span 2;
+}
+
+.dwes-martes {
+    grid-column: 4/span 2;
+    grid-row: 2/span 2;
+}
+
+.diw-martes {
+    grid-column: 4;
+    grid-row: 4/span 2;
+}
+
+.dwec-martes {
+    grid-column: 4;
+    grid-row: 6/span 2;
+}
+
+.eiem-miercoles {
+    grid-column: 5;
+    grid-row: 4;
+}
+
+.daw-miercoles {
+    grid-column: 5;
+    grid-row: 5/span 2;
+}
+
+.diw-miercoles {
+    grid-column: 5;
+    grid-row: 7;
+}
+
+.eiem-jueves {
+    grid-column: 6;
+    grid-row: 2;
+}
+
+.dwec-jueves {
+    grid-column: 6;
+    grid-row: 3/span 2;
+}
+
+.diw-jueves-viernes {
+    grid-column: 6/span 2;
+    grid-row: 5;
+}
+
+.diw-jueves {
+    grid-column: 6;
+    grid-row: 6;
+}
+
+.daw-jueves {
+    grid-column: 6;
+    grid-row: 7;
+}
+
+.dwes-viernes {
+    grid-column: 7;
+    grid-row: 2/span 2;
+}
+
+.diw-viernes1 {
+    grid-column: 7;
+    grid-row: 4;
+}
+
+.eiem-viernes {
+    grid-column: 7;
+    grid-row: 6;
+}
+
+.ies {
+    grid-column: 1/span 7;
+    grid-row: 8;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #00607D;
+}
+
+.daw {
+    background-color: #0081A7;
+}
+
+.dwec {
+    background-color: #00AFB9;
+}
+
+.dwes {
+    background-color: #FED9B7;
+}
+
+.diw {
+    background-color: #F07167;
+}
+
+.eiem {
+    background-color: #823038;
+}
+
+.materia {
+    color: #F7A58F;
+    font-size: 1.5em;
+    font-weight: bold;
+}
