@@ -4,8 +4,48 @@
     box-sizing: border-box;
 }
 
-.container {
+/** Cabecera **/
+/*
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}*/
+
+.unesco {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 100px;
+    width: 120px;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+a {
+    text-decoration: none;
+}
+
+/** Principal **/
+main {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
 }
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+/** Pie de página **/
