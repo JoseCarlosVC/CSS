@@ -60,6 +60,8 @@ main {
     position: relative;
     text-align: justify;
     padding: 5%;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 h2 {
@@ -95,7 +97,8 @@ li {
 }
 
 .col-row2 {
-    grid-column: span 2;
+    grid-column: span 3;
+    grid-row: span 2;
     background-color: pink;
     position: relative;
 }
@@ -105,13 +108,29 @@ li {
     opacity: 0;
 }
 
-.col-row1 {}
+.col1-row2 {
+    grid-row: span 2;
+    background-color: yellow;
+}
 
+.col2-row2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.col2-row1 {
+    grid-column: span 2;
+}
+
+/*
 img {
     height: 150px;
     width: 150px;
+}*/
+img {
+    width: 100%;
+    height: 100%;
 }
-
 
 /** Pie de página **/
 
