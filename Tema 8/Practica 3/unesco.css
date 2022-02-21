@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1500px;
+    min-width: min-content;
+    margin: 0 auto;
+    font-family: 'Kodchasan', sans-serif;
+    background-color: #222222;
+}
+
+/** Cabecera **/
+
+.unesco {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+
+}
+
+.logo {
+    height: 100px;
+    width: 120px;
+    margin: 1vh 1vw 1vh 0.5vw;
+}
+
+h1 {
+    color: #D69D36;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/** Principal **/
+main {
+    margin: 0 auto;
+    /*width: 70%;*/
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.texto {
+    background-color: #D69D36;
+    position: relative;
+    text-align: justify;
+    padding: 5%;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+h2 {
+    color: #1C4885;
+    margin-bottom: 2vh;
+    font-size: 2em;
+    margin-left: 1vw;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 2vh;
+    font-family: 'Maitree', serif;
+    margin-left: 1vw;
+}
+
+ul {
+    list-style: square;
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+}
+
+li {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Maitree', serif;
+    list-style-position: inside;
+}
+
+.boton-texto {
+    background-color: #1C4885;
+    color: #FF9900;
+    text-align: center;
+    border: 3px solid black;
+    width: 90%;
+    margin: auto;
+    font-size: 1em;
+    transition: all 0.5s ease;
+}
+
+.col-row2 {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.fotos {
+    position: relative;
+}
+
+.boton-img {
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    top: 50%;
+    background-color: #D69D36DD;
+    border: 2px solid #1C4885DD;
+    color: #1C4885DD;
+    font-size: 1em;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    transition: all 0.5s ease;
+}
+
+.boton-texto:hover {
+    transition: all 0.5s ease;
+    background-color: black;
+    color: white;
+    border: 3px solid #1C4885;
+}
+
+.col1-row2 {
+    grid-row: span 2;
+}
+
+.col2-row2 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.col2-row1 {
+    grid-column: span 2;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+div>img {
+    transition: all 0.5s ease;
+    filter: grayscale(100%);
+}
+
+img:hover {
+    transition: all 0.5s ease;
+    filter: grayscale(0%);
+}
+
+.fotos:hover>.boton-img {
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+
+
+/** Pie de página **/
+
+footer {
+    color: #D69D36;
+    width: 100%;
+    text-align: center;
+    padding: 1vh 1vw;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        /*grid-auto-rows: ;
+        */
+    }
+
+    .texto {
+        grid-column: span 1;
+    }
+
+    .col-row2 {
+        grid-column: span 1;
+    }
+
+    .col-row1 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .texto2 {
+        grid-area: 4 / 2 / span 2 / span 1;
+    }
+
+    .cordoba {
+        grid-area: 6 / 2 / span 2 / span 1;
+    }
+
+    .texto3 {
+        grid-area: 8 / 1 / span 2 / span 1;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .boton-texto {
+        background-color: #1C4885;
+        border: 3px solid black;
+    }
+
+    .boton-texto:hover {
+        background-color: #1C4885;
+        color: #FF9900;
+        border: 3px solid black;
+    }
+
+    div>img {
+        transition: all 0.5s ease;
+        filter: none;
+    }
+
+    .boton-img {
+        opacity: 1;
+    }
+
+    .col-row2 {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .segovia {
+        grid-column: 1 / span 2;
+        grid-row: 3 / span 2;
+    }
+
+    .texto {
+        /*grid-area: row col row col;*/
+        grid-area: 5 / 1 / span 1 / span 2;
+    }
+
+    .texto2 {
+        grid-area: 10 / 1 / span 1 / span 2;
+    }
+
+    .vizcaya {
+        grid-area: 6 / 1 / span 2 / span 2;
+    }
+
+    .gaudi {
+        grid-area: 8 / 1 / span 2 / span 1;
+    }
+
+    .cordoba {
+        grid-area: 13 / 1 / span 2 / span 1;
+    }
+
+    .texto3 {
+        grid-area: 15 / 1 / span 1 / span 2;
+    }
+}

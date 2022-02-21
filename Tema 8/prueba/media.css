@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(146, 43, 43);
+}
+
+h1 {
+    font-size: 3em;
+    text-decoration: underline;
+    text-align: center;
+    color: rgb(60, 29, 92);
+    padding: 1%;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    color: rgb(60, 29, 92);
+    padding: 1%;
+}
+
+nav {
+    font-size: 1.5em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    border: 5px solid black;
+    background-color: black;
+    padding: 0.5%;
+}
+
+a {
+    background-color: rgb(204, 119, 16);
+    text-decoration: none;
+    color: gainsboro;
+    flex-grow: 1;
+    flex-basis: 20%;
+    font-size: 1em;
+    text-align: center;
+}
+
+a:hover {
+    background-color: palegoldenrod;
+}
+
+main {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.izquierda {
+    background-color: coral;
+    flex-basis: 35%;
+
+}
+
+.centro {
+    background-color: palegoldenrod;
+    flex-basis: 50%;
+
+}
+
+.derecha {
+    background-color: pink;
+    flex-basis: 35%;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.8em;
+    padding: 3%;
+    color: blueviolet;
+}
+
+p {
+    padding: 3%;
+    color: rebeccapurple;
+    text-align: justify;
+}
+
+footer {
+    background-color: darkgoldenrod;
+    font-size: 3em;
+    text-align: center;
+    color: gainsboro;
+}
+
+@media screen and (max-width: 850px) {
+    nav {
+        display: flex;
+        flex-flow: column nowrap;
+        border-bottom: none;
+    }
+
+    a {
+        margin: 1px;
+        padding: 1%;
+    }
+
+    main {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .centro {
+        order: 1;
+    }
+
+    .derecha {
+        order: 2;
+    }
+
+    .izquierda {
+        order: 3;
+    }
+}
