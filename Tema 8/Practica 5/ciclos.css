@@ -4,11 +4,28 @@
     box-sizing: border-box;
 }
 
+/*
+    Colores:
+        rgb(94, 19, 87)
+        rgb(133, 74, 141)
+        rgb(207, 207, 202)
+        rgba(14, 3, 14, 0.8)
+*/
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Electrolize', sans-serif;
     background: url("./fotos/foto1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: 100vw 100vh;
+    color: rgb(207, 207, 202);
+}
+
+/** Cabecera **/
+
+input,
+.hamborguesa {
+    visibility: hidden;
 }
 
 a {
@@ -17,44 +34,196 @@ a {
 }
 
 header {
-    background-color: #5e1257;
-    color: #f5f5f5;
+    background-color: rgb(94, 19, 87);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0.5%;
+    /*align-items: center;
+    align-content: center;
+    align-items: stretch;*/
+    height: 45px;
+    /*padding: 0.5%;*/
 }
 
 .inicio {
     font-size: 2.5em;
+    flex-basis: 40%;
+    padding: 0.05%;
+}
+
+.partes {
+    display: flex;
+    height: 100%;
+    /*width: 46%;*/
+    flex-basis: 46.5%;
+    /*height: 50px;*/
+    /*align-self: center;*/
 }
 
 .enlaces {
+    align-self: center;
+    height: 100%;
+    padding: 1.5%;
     font-size: 1.5em;
-    border-left: 1px solid #f5f5f5;
-    border-right: 1px solid #f5f5f5;
+    border-left: 1px solid rgb(207, 207, 202);
+    /*border-right: 1px solid #f5f5f5;*/
+}
+
+.enlaces:last-of-type {
+    visibility: hidden;
+    display: none;
+}
+
+.enlaces:hover {
+    background-color: rgb(133, 74, 141);
+}
+
+/** Principal**/
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+main {
+    position: relative;
 }
 
 .contenedor {
-    visibility: hidden;
+    /*display: none;*/
     width: 70%;
     background-color: rgba(0, 0, 0, 0.5);
     margin: 5vh auto;
+    border-radius: 10px;
+    position: absolute;
 }
 
-#inicio {
-    visibility: visible;
+/*#inicio {
+    position: relative;
+    display: inherit;
+}*/
+
+h1 {
+    text-align: center;
+    padding: 2%;
+    font-size: 2em;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.2em;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-bottom: 15%;
 }
 
 img {
-    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    width: 40%;
 }
 
 footer {
-    background-color: #5e1257;
-    color: #f5f5f5;
+    background-color: rgb(94, 19, 87);
     font-size: 1.2em;
     text-align: center;
-    padding: 1%;
+    padding: 0.5%;
     letter-spacing: 0.2vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        background-color: transparent;
+    }
+
+    .esconder {
+        display: none;
+    }
+
+    input,
+    .hamborguesa {
+        visibility: visible;
+    }
+
+    input {
+        display: block;
+        width: 5vw;
+        height: 5vh;
+        position: absolute;
+        top: 1vh;
+        right: 2vw;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    .hamborguesa {
+        width: 5vw;
+        height: 0.5vh;
+        position: absolute;
+        top: 1vh;
+        right: 4vw;
+        transition: all 0.4s ease-in-out;
+        z-index: 2;
+    }
+
+    span {
+        display: block;
+        width: 5vw;
+        height: 0.5vh;
+        margin-bottom: 5px;
+        top: 1vh;
+        right: 4vw;
+        background: rgb(207, 207, 202);
+        border-radius: 3px;
+        z-index: 1;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .primera {
+        transform-origin: 0% 100%;
+    }
+
+    .segunda {
+        transform-origin: 0% 100%;
+    }
+
+    input:checked+.contenedor>.segunda {
+        transform: rotateY(90deg);
+    }
+
+    input:checked+.contenedor>.primera {
+        transform: translateY(2vh);
+        background: green;
+    }
+
+    input:checked+.contenedor>.tercera {
+        transform: rotate(90deg);
+        background: green;
+    }
+
+    input:checked+.contenedor {
+        transform: rotate(45deg);
+        transition-delay: 0.5s;
+    }
+
+    input:not(:checked)+.contenedor>.tercera {
+        transition-delay: 0.5s;
+    }
+
+    input:not(:checked)+.contenedor>.primera {
+        transition-delay: 0.5s;
+    }
+
+    input:not(:checked)+.contenedor>.segunda {
+        transition-delay: 0.5s;
+    }
 }

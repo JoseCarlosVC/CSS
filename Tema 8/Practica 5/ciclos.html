@@ -6,23 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ciclos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <a href="#" class="inicio">Inicio</a>
-        <div class="partes">
-            <a href="#" class="enlaces">SMR</a>
-            <a href="#" class="enlaces">ASIR</a>
-            <a href="#" class="enlaces">Desarrollo Web</a>
-            <a href="#" class="enlaces">Desarrollo Multiplataforma</a>
-            <a href="#" class="enlaces">Ciberseguridad</a>
+        <a href="#" class="inicio esconder">Inicio</a>
+        <input type="checkbox">
+        <div class="hamborguesa">
+            <span class="primera"></span>
+            <span class="segunda"></span>
+            <span class="tercera"></span>
+        </div>
+        <div class="partes esconder">
+            <a href="#" class="enlaces botonSMR">SMR</a>
+            <a href="#" class="enlaces botonASIR">ASIR</a>
+            <a href="#" class="enlaces botonDAW">Desarrollo Web</a>
+            <a href="#" class="enlaces botonDAM">Desarrollo Multiplataforma</a>
+            <a href="#" class="enlaces botonCiber">Ciberseguridad</a>
             <a href="#" class="enlaces">Volver a la portada</a>
         </div>
     </header>
     <main>
-        <div class="contenedor" id="inicio">
+        <div class="contenedor contenedorInicio" id="inicio">
             <h1>
                 Ciclos Formativos de Informática
             </h1>
@@ -33,7 +43,7 @@
                 para un brillante futuro profesional. Haz clic en el menú de arriba para saber más.
             </p>
         </div>
-        <div class="contenedor" id="smr">
+        <div class="contenedor contenedorSMR" id="smr">
             <h1>
                 Sistemas Microinformáticos y Redes
             </h1>
@@ -45,7 +55,7 @@
                 servicios multiusuario, aplicaciones y dispositivos compartidos en un entorno de red local.
             </p>
         </div>
-        <div class="contenedor" id="asir">
+        <div class="contenedor contenedorASIR" id="asir">
             <h1>
                 Administración de Sistemas Informáticos en Red
             </h1>
@@ -58,7 +68,7 @@
                 técnico en entornos web y supervisor de sistemas.
             </p>
         </div>
-        <div class="contenedor" id="daw">
+        <div class="contenedor contenedorDAW" id="daw">
             <h1>
                 Desarrollo de Aplicaciones Web
             </h1>
@@ -71,7 +81,7 @@
                 los alumnos para trabajar en las profesiones más nuevas. Hay múltiples salidas laborales.
             </p>
         </div>
-        <div class="contenedor" id="dam">
+        <div class="contenedor contenedorDAM" id="dam">
             <h1>
                 Desarrollo de Aplicaciones Multiplataforma
             </h1>
@@ -84,7 +94,7 @@
                 plataformas y ofrecer soluciones realmente innovadoras.
             </p>
         </div>
-        <div class="contenedor" id="ciber">
+        <div class="contenedor contenedorCiber" id="ciber">
             <h1>
                 Curso de Ciberseguridad
             </h1>
@@ -102,6 +112,110 @@
     <footer>
         Diseño de Interfaces Web - 2DAW. Ceuta.
     </footer>
+    <script>
+        $(document).ready(function () {
+            $('.botonSMR').on('click', function () {
+                $(this).parents().find('.contenedorInicio').removeClass('visible');
+                $(this).parents().find('.contenedorSMR').addClass('visible');
+                $(this).parents().find('.contenedorASIR').removeClass('visible');
+                $(this).parents().find('.contenedorDAW').removeClass('visible');
+                $(this).parents().find('.contenedorDAM').removeClass('visible');
+                $(this).parents().find('.contenedorCiber').removeClass('visible');
+
+                $(this).parents().find('.contenedorInicio').addClass('invisible');
+                $(this).parents().find('.contenedorSMR').addClass('visible');
+                $(this).parents().find('.contenedorASIR').addClass('invisible');
+                $(this).parents().find('.contenedorDAW').addClass('invisible');
+                $(this).parents().find('.contenedorDAM').addClass('invisible');
+                $(this).parents().find('.contenedorCiber').addClass('invisible');
+
+                $(this).parents().find('.contenedornavegacion').toggleClass(
+                    'menu_desplegado menu_plegado');
+                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                    'icono_barras icono_cruz');
+            });
+            $('.botonASIR').on('click', function () {
+                $(this).parents().find('.contenedorInicio').removeClass('visible');
+                $(this).parents().find('.contenedorSMR').removeClass('visible');
+                $(this).parents().find('.contenedorASIR').addClass('visible');
+                $(this).parents().find('.contenedorDAW').removeClass('visible');
+                $(this).parents().find('.contenedorDAM').removeClass('visible');
+                $(this).parents().find('.contenedorCiber').removeClass('visible');
+
+                $(this).parents().find('.contenedorInicio').addClass('invisible');
+                $(this).parents().find('.contenedorSMR').addClass('invisible');
+                $(this).parents().find('.contenedorASIR').addClass('visible');
+                $(this).parents().find('.contenedorDAW').addClass('invisible');
+                $(this).parents().find('.contenedorDAM').addClass('invisible');
+                $(this).parents().find('.contenedorCiber').addClass('invisible');
+
+                $(this).parents().find('.contenedornavegacion').toggleClass(
+                    'menu_desplegado menu_plegado');
+                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                    'icono_barras icono_cruz');
+            });
+            $('.botonDAW').on('click', function () {
+                $(this).parents().find('.contenedorInicio').removeClass('visible');
+                $(this).parents().find('.contenedorSMR').removeClass('visible');
+                $(this).parents().find('.contenedorASIR').removeClass('visible');
+                $(this).parents().find('.contenedorDAW').addClass('visible');
+                $(this).parents().find('.contenedorDAM').removeClass('visible');
+                $(this).parents().find('.contenedorCiber').removeClass('visible');
+
+                $(this).parents().find('.contenedorInicio').addClass('invisible');
+                $(this).parents().find('.contenedorSMR').addClass('invisible');
+                $(this).parents().find('.contenedorASIR').addClass('invisible');
+                $(this).parents().find('.contenedorDAW').addClass('visible');
+                $(this).parents().find('.contenedorDAM').addClass('invisible');
+                $(this).parents().find('.contenedorCiber').addClass('invisible');
+
+                $(this).parents().find('.contenedornavegacion').toggleClass(
+                    'menu_desplegado menu_plegado');
+                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                    'icono_barras icono_cruz');
+            });
+            $('.botonDAM').on('click', function () {
+                $(this).parents().find('.contenedorInicio').removeClass('visible');
+                $(this).parents().find('.contenedorSMR').removeClass('visible');
+                $(this).parents().find('.contenedorASIR').removeClass('visible');
+                $(this).parents().find('.contenedorDAW').removeClass('visible');
+                $(this).parents().find('.contenedorDAM').addClass('visible');
+                $(this).parents().find('.contenedorCiber').removeClass('visible');
+
+                $(this).parents().find('.contenedorInicio').addClass('invisible');
+                $(this).parents().find('.contenedorSMR').addClass('invisible');
+                $(this).parents().find('.contenedorASIR').addClass('invisible');
+                $(this).parents().find('.contenedorDAW').addClass('invisible');
+                $(this).parents().find('.contenedorDAM').addClass('visible');
+                $(this).parents().find('.contenedorCiber').addClass('invisible');
+
+                $(this).parents().find('.contenedornavegacion').toggleClass(
+                    'menu_desplegado menu_plegado');
+                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                    'icono_barras icono_cruz');
+            });
+            $('.botonCiber').on('click', function () {
+                $(this).parents().find('.contenedorInicio').removeClass('visible');
+                $(this).parents().find('.contenedorSMR').removeClass('visible');
+                $(this).parents().find('.contenedorASIR').removeClass('visible');
+                $(this).parents().find('.contenedorDAW').removeClass('visible');
+                $(this).parents().find('.contenedorDAM').removeClass('visible');
+                $(this).parents().find('.contenedorCiber').addClass('visible');
+
+                $(this).parents().find('.contenedorInicio').addClass('invisible');
+                $(this).parents().find('.contenedorSMR').addClass('invisible');
+                $(this).parents().find('.contenedorASIR').addClass('invisible');
+                $(this).parents().find('.contenedorDAW').addClass('invisible');
+                $(this).parents().find('.contenedorDAM').addClass('invisible');
+                $(this).parents().find('.contenedorCiber').addClass('visible');
+
+                $(this).parents().find('.contenedornavegacion').toggleClass(
+                    'menu_desplegado menu_plegado');
+                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                    'icono_barras icono_cruz');
+            });
+        });
+    </script>
 </body>
 
 </html>
