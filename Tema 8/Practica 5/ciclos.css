@@ -14,11 +14,35 @@
 
 body {
     font-family: 'Electrolize', sans-serif;
-    background: url("./fotos/foto1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100vw 100vh;
     color: rgb(207, 207, 202);
+    background-color: rgba(14, 3, 14, 0.8);
+}
+
+.lienzoInicio {
+    background: url("./fotos/foto1.jpg");
+}
+
+.lienzoSMR {
+    background: url("./fotos/foto2.jpg");
+}
+
+.lienzoASIR {
+    background: url("./fotos/foto3.jpg");
+}
+
+.lienzoDAW {
+    background: url("./fotos/foto4.jpg");
+}
+
+.lienzoDAM {
+    background: url("./fotos/foto5.jpg");
+}
+
+.lienzoCiber {
+    background: url("./fotos/foto6.jpg");
 }
 
 /** Cabecera **/
@@ -79,13 +103,7 @@ header {
 
 /** Principal**/
 
-.visible {
-    display: block;
-}
 
-.invisible {
-    display: none;
-}
 
 main {
     position: relative;
@@ -97,13 +115,21 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 5vh auto;
     border-radius: 10px;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 /*#inicio {
     position: relative;
     display: inherit;
 }*/
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
 
 h1 {
     text-align: center;
@@ -134,18 +160,45 @@ footer {
     text-align: center;
     padding: 0.5%;
     letter-spacing: 0.2vw;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1800px) {
     header {
+        display: flex;
+        flex-flow: column;
         background-color: transparent;
+        height: auto;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 3;
     }
 
     .esconder {
+        /*display: none;*/
+        display: flex;
+        flex-flow: column;
+        background-color: rgb(94, 19, 87);
+        z-index: 9;
+    }
+
+    .inicio {
         display: none;
+    }
+
+    .enlaces {
+        border: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .enlaces:last-of-type {
+        border-top: 1px solid rgb(207, 207, 202);
+        visibility: visible;
+        display: initial;
     }
 
     input,
@@ -166,19 +219,30 @@ footer {
     }
 
     .hamborguesa {
-        width: 5vw;
-        height: 0.5vh;
+        cursor: pointer;
+        width: 4%;
+        height: 15%;
         position: absolute;
         top: 1vh;
         right: 4vw;
         transition: all 0.4s ease-in-out;
-        z-index: 2;
+        z-index: 10;
+    }
+
+    .menu_plegado {
+        transition: all 0.4s ease-in-out;
+        transform: translateY(-150%);
+    }
+
+    .menu_desplegado {
+        transition: all 0.4s ease-in-out;
+        transform: translateY(0);
     }
 
     span {
         display: block;
-        width: 5vw;
-        height: 0.5vh;
+        width: 100%;
+        height: 8%;
         margin-bottom: 5px;
         top: 1vh;
         right: 4vw;
@@ -188,42 +252,22 @@ footer {
         transition: all 0.4s ease-in-out;
     }
 
-    .primera {
-        transform-origin: 0% 100%;
-    }
-
-    .segunda {
-        transform-origin: 0% 100%;
-    }
-
-    input:checked+.contenedor>.segunda {
+    .icono_cruz>.segunda {
         transform: rotateY(90deg);
     }
 
-    input:checked+.contenedor>.primera {
-        transform: translateY(2vh);
-        background: green;
+    .icono_cruz>.primera {
+        transform: translateY(3.5vh);
+
     }
 
-    input:checked+.contenedor>.tercera {
+    .icono_cruz>.tercera {
         transform: rotate(90deg);
-        background: green;
     }
 
-    input:checked+.contenedor {
-        transform: rotate(45deg);
+    .icono_cruz {
+        transform: rotate(-45deg);
         transition-delay: 0.5s;
     }
 
-    input:not(:checked)+.contenedor>.tercera {
-        transition-delay: 0.5s;
-    }
-
-    input:not(:checked)+.contenedor>.primera {
-        transition-delay: 0.5s;
-    }
-
-    input:not(:checked)+.contenedor>.segunda {
-        transition-delay: 0.5s;
-    }
 }

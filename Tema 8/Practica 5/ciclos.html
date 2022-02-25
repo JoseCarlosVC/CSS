@@ -13,26 +13,27 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
-        <a href="#" class="inicio esconder">Inicio</a>
-        <input type="checkbox">
-        <div class="hamborguesa">
-            <span class="primera"></span>
-            <span class="segunda"></span>
-            <span class="tercera"></span>
-        </div>
+<body class="body lienzoInicio">
+    <!--<input type="checkbox">-->
+    <div class="hamborguesa contenedor_icono_burguer icono_barras">
+        <span class="primera"></span>
+        <span class="segunda"></span>
+        <span class="tercera"></span>
+    </div>
+    <header class="contenedornavegacion menu_plegado">
+        <a href="#" class="inicio esconder botonInicio">Inicio</a>
+
         <div class="partes esconder">
             <a href="#" class="enlaces botonSMR">SMR</a>
             <a href="#" class="enlaces botonASIR">ASIR</a>
             <a href="#" class="enlaces botonDAW">Desarrollo Web</a>
             <a href="#" class="enlaces botonDAM">Desarrollo Multiplataforma</a>
             <a href="#" class="enlaces botonCiber">Ciberseguridad</a>
-            <a href="#" class="enlaces">Volver a la portada</a>
+            <a href="#" class="enlaces botonInicio">Volver a la portada</a>
         </div>
     </header>
     <main>
-        <div class="contenedor contenedorInicio" id="inicio">
+        <div class="contenedor contenedorInicio visible" id="inicio">
             <h1>
                 Ciclos Formativos de Informática
             </h1>
@@ -43,7 +44,7 @@
                 para un brillante futuro profesional. Haz clic en el menú de arriba para saber más.
             </p>
         </div>
-        <div class="contenedor contenedorSMR" id="smr">
+        <div class="contenedor contenedorSMR invisible" id="smr">
             <h1>
                 Sistemas Microinformáticos y Redes
             </h1>
@@ -55,7 +56,7 @@
                 servicios multiusuario, aplicaciones y dispositivos compartidos en un entorno de red local.
             </p>
         </div>
-        <div class="contenedor contenedorASIR" id="asir">
+        <div class="contenedor contenedorASIR invisible" id="asir">
             <h1>
                 Administración de Sistemas Informáticos en Red
             </h1>
@@ -68,7 +69,7 @@
                 técnico en entornos web y supervisor de sistemas.
             </p>
         </div>
-        <div class="contenedor contenedorDAW" id="daw">
+        <div class="contenedor contenedorDAW invisible" id="daw">
             <h1>
                 Desarrollo de Aplicaciones Web
             </h1>
@@ -81,7 +82,7 @@
                 los alumnos para trabajar en las profesiones más nuevas. Hay múltiples salidas laborales.
             </p>
         </div>
-        <div class="contenedor contenedorDAM" id="dam">
+        <div class="contenedor contenedorDAM invisible" id="dam">
             <h1>
                 Desarrollo de Aplicaciones Multiplataforma
             </h1>
@@ -94,7 +95,7 @@
                 plataformas y ofrecer soluciones realmente innovadoras.
             </p>
         </div>
-        <div class="contenedor contenedorCiber" id="ciber">
+        <div class="contenedor contenedorCiber invisible" id="ciber">
             <h1>
                 Curso de Ciberseguridad
             </h1>
@@ -114,6 +115,34 @@
     </footer>
     <script>
         $(document).ready(function () {
+            $('.botonInicio').on('click', function () {
+                $(this).parents().find('.contenedorInicio').addClass('visible');
+                $(this).parents().find('.contenedorSMR').removeClass('visible');
+                $(this).parents().find('.contenedorASIR').removeClass('visible');
+                $(this).parents().find('.contenedorDAW').removeClass('visible');
+                $(this).parents().find('.contenedorDAM').removeClass('visible');
+                $(this).parents().find('.contenedorCiber').removeClass('visible');
+
+                $(this).parents().find('.contenedorInicio').removeClass('invisible');
+                $(this).parents().find('.contenedorSMR').addClass('invisible');
+                $(this).parents().find('.contenedorASIR').addClass('invisible');
+                $(this).parents().find('.contenedorDAW').addClass('invisible');
+                $(this).parents().find('.contenedorDAM').addClass('invisible');
+                $(this).parents().find('.contenedorCiber').addClass('invisible');
+
+                $(this).parents().find('.body').addClass('lienzoInicio');
+                $(this).parents().find('.body').removeClass('lienzoSMR');
+                $(this).parents().find('.body').removeClass('lienzoASIR');
+                $(this).parents().find('.body').removeClass('lienzoDAW');
+                $(this).parents().find('.body').removeClass('lienzoDAM');
+                $(this).parents().find('.body').removeClass('lienzoCiber');
+
+
+                $(this).parents().find('.contenedornavegacion').toggleClass(
+                    'menu_desplegado menu_plegado');
+                $(this).parents().find('.contenedor_icono_burguer').toggleClass(
+                    'icono_barras icono_cruz');
+            });
             $('.botonSMR').on('click', function () {
                 $(this).parents().find('.contenedorInicio').removeClass('visible');
                 $(this).parents().find('.contenedorSMR').addClass('visible');
@@ -123,15 +152,23 @@
                 $(this).parents().find('.contenedorCiber').removeClass('visible');
 
                 $(this).parents().find('.contenedorInicio').addClass('invisible');
-                $(this).parents().find('.contenedorSMR').addClass('visible');
+                $(this).parents().find('.contenedorSMR').removeClass('invisible');
                 $(this).parents().find('.contenedorASIR').addClass('invisible');
                 $(this).parents().find('.contenedorDAW').addClass('invisible');
                 $(this).parents().find('.contenedorDAM').addClass('invisible');
                 $(this).parents().find('.contenedorCiber').addClass('invisible');
 
+                $(this).parents().find('.body').removeClass('lienzoInicio');
+                $(this).parents().find('.body').addClass('lienzoSMR');
+                $(this).parents().find('.body').removeClass('lienzoASIR');
+                $(this).parents().find('.body').removeClass('lienzoDAW');
+                $(this).parents().find('.body').removeClass('lienzoDAM');
+                $(this).parents().find('.body').removeClass('lienzoCiber');
+
+
                 $(this).parents().find('.contenedornavegacion').toggleClass(
                     'menu_desplegado menu_plegado');
-                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                $(this).parents().find('.contenedor_icono_burguer').toggleClass(
                     'icono_barras icono_cruz');
             });
             $('.botonASIR').on('click', function () {
@@ -144,14 +181,21 @@
 
                 $(this).parents().find('.contenedorInicio').addClass('invisible');
                 $(this).parents().find('.contenedorSMR').addClass('invisible');
-                $(this).parents().find('.contenedorASIR').addClass('visible');
+                $(this).parents().find('.contenedorASIR').removeClass('invisible');
                 $(this).parents().find('.contenedorDAW').addClass('invisible');
                 $(this).parents().find('.contenedorDAM').addClass('invisible');
                 $(this).parents().find('.contenedorCiber').addClass('invisible');
 
+                $(this).parents().find('.body').removeClass('lienzoInicio');
+                $(this).parents().find('.body').removeClass('lienzoSMR');
+                $(this).parents().find('.body').addClass('lienzoASIR');
+                $(this).parents().find('.body').removeClass('lienzoDAW');
+                $(this).parents().find('.body').removeClass('lienzoDAM');
+                $(this).parents().find('.body').removeClass('lienzoCiber');
+
                 $(this).parents().find('.contenedornavegacion').toggleClass(
                     'menu_desplegado menu_plegado');
-                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                $(this).parents().find('.contenedor_icono_burguer').toggleClass(
                     'icono_barras icono_cruz');
             });
             $('.botonDAW').on('click', function () {
@@ -165,13 +209,20 @@
                 $(this).parents().find('.contenedorInicio').addClass('invisible');
                 $(this).parents().find('.contenedorSMR').addClass('invisible');
                 $(this).parents().find('.contenedorASIR').addClass('invisible');
-                $(this).parents().find('.contenedorDAW').addClass('visible');
+                $(this).parents().find('.contenedorDAW').removeClass('invisible');
                 $(this).parents().find('.contenedorDAM').addClass('invisible');
                 $(this).parents().find('.contenedorCiber').addClass('invisible');
 
+                $(this).parents().find('.body').removeClass('lienzoInicio');
+                $(this).parents().find('.body').removeClass('lienzoSMR');
+                $(this).parents().find('.body').removeClass('lienzoASIR');
+                $(this).parents().find('.body').addClass('lienzoDAW');
+                $(this).parents().find('.body').removeClass('lienzoDAM');
+                $(this).parents().find('.body').removeClass('lienzoCiber');
+
                 $(this).parents().find('.contenedornavegacion').toggleClass(
                     'menu_desplegado menu_plegado');
-                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                $(this).parents().find('.contenedor_icono_burguer').toggleClass(
                     'icono_barras icono_cruz');
             });
             $('.botonDAM').on('click', function () {
@@ -186,12 +237,19 @@
                 $(this).parents().find('.contenedorSMR').addClass('invisible');
                 $(this).parents().find('.contenedorASIR').addClass('invisible');
                 $(this).parents().find('.contenedorDAW').addClass('invisible');
-                $(this).parents().find('.contenedorDAM').addClass('visible');
+                $(this).parents().find('.contenedorDAM').removeClass('invisible');
                 $(this).parents().find('.contenedorCiber').addClass('invisible');
+
+                $(this).parents().find('.body').removeClass('lienzoInicio');
+                $(this).parents().find('.body').removeClass('lienzoSMR');
+                $(this).parents().find('.body').removeClass('lienzoASIR');
+                $(this).parents().find('.body').removeClass('lienzoDAW');
+                $(this).parents().find('.body').addClass('lienzoDAM');
+                $(this).parents().find('.body').removeClass('lienzoCiber');
 
                 $(this).parents().find('.contenedornavegacion').toggleClass(
                     'menu_desplegado menu_plegado');
-                $(this).parents().find('.contenedor_icono_burger').toggleClass(
+                $(this).parents().find('.contenedor_icono_burguer').toggleClass(
                     'icono_barras icono_cruz');
             });
             $('.botonCiber').on('click', function () {
@@ -207,12 +265,30 @@
                 $(this).parents().find('.contenedorASIR').addClass('invisible');
                 $(this).parents().find('.contenedorDAW').addClass('invisible');
                 $(this).parents().find('.contenedorDAM').addClass('invisible');
-                $(this).parents().find('.contenedorCiber').addClass('visible');
+                $(this).parents().find('.contenedorCiber').removeClass('invisible');
+
+                $(this).parents().find('.body').removeClass('lienzoInicio');
+                $(this).parents().find('.body').removeClass('lienzoSMR');
+                $(this).parents().find('.body').removeClass('lienzoASIR');
+                $(this).parents().find('.body').removeClass('lienzoDAW');
+                $(this).parents().find('.body').removeClass('lienzoDAM');
+                $(this).parents().find('.body').addClass('lienzoCiber');
 
                 $(this).parents().find('.contenedornavegacion').toggleClass(
                     'menu_desplegado menu_plegado');
-                $(this).parents().find('.contenedor_icono_burger').toggleClass(
-                    'icono_barras icono_cruz');
+                $(this).parents().find('.contenedor_icono_burguer').toggleClass(
+                    'icono_cruz');
+
+            });
+            $('.contenedor_icono_burguer').on('click', function () {
+                $(this).toggleClass('icono_cruz');
+                $(".contenedornavegacion").toggleClass("menu_plegado");
+                $(".contenedornavegacion").toggleClass("menu_desplegado");
+            });
+
+            $('.principal').on('click', function () {
+                $(this).parents().find(".menu_desplegado").toggleClass("menu_desplegado menu_plegado");
+                $(this).parents().find(".icono_cruz").toggleClass("icono_barras icono_cruz");
             });
         });
     </script>
